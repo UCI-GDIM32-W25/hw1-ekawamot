@@ -57,6 +57,12 @@ Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lectur
 
 Write your Devlog here!
 
+In my breakdown, I listed the various game objects, their attributes, and what they can do. This helped me with making my code for this assignment. The first action I worked on was player movement, as it was the easiest to do. I accomplished this by detecting WASD inputs in the update section of the player script, making each key go in a different direction by using _playerTransform. 
+
+Next, I worked on the having the player plant the plant. I first made the plant as a game object, then moved it to the prefab files. After, I deleted the original object and the plant could be used for the player to plant and I added the prefab to the player script. To first plant, I made an if statement to detect the space bar being pressed. Then, I used the instantiate function in the PlantSeed function. Once the plant would spawn with the instantiate function, I added more parameters (the player's position and rotation from the transform component) to make the plant spawn where the player was at the time they pressed space. Once I had the planting meachnic down, I added an additional if statement nested in the input detection statement to check how many seed the player had, and if it was zero, the player wouldn't be able to plant anymore. 
+
+For the UI, I first changed the base value of the Planted text and the remaining text to 0 and 5 respectively. Then, within the space bar detection statement, I subtracted one from the seeds remaining and added one to the seeds planted. I knew that each seed planted would change the UI, so I changed the values in the space bar statement. Then, I edited the UpdateSeeds function to change the current text_SeedsPlantedNum and the current text_SeedsRemainingNum to reflect the values after subtracting and adding in the space bar statement. At first, Untiy was giving me an error about converting int to string, so I added the ToString function to the integers to make sure they could show up on screen. 
+
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
